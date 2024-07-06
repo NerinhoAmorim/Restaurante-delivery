@@ -1,16 +1,21 @@
 server:
- servlet:
+  servlet:
     context-path: /restaurante-delivery/api
-    
+
 spring:
   data:
     mongodb:
       authentication-database: admin
-      uri: ${MONGO_DB_URI:mongodb+srv://neramornas:JtFWUAGW1HZoMw1d@wakanda.d3o3yvu.mongodb.net/?retryWrites=true&w=majority&appName=Wakanda}
+      uri: ${MONGO_DB_URI:mongodb+srv://wakanda:NiAVCUsFGBBExp3U@cluster0.djcfb5x.mongodb.net/wakanda?retryWrites=true&w=majority}
       auto-index-creation: true
-      database: restaurante-delivery
-  
+  main:
+    allow-circular-references: true
+
+api:
+  security:
+    token:
+      secret: ${JWT_SECRET:DLPI21D9ITPLAS}
 
 springdoc:
   swagger-ui:
-    path: /swagger-ui      
+    path: /swagger-ui
