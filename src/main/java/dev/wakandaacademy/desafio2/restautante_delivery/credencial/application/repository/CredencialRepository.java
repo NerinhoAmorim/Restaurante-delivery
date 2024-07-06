@@ -4,5 +4,6 @@ import dev.wakandaacademy.desafio2.restautante_delivery.credencial.domain.Creden
 
 public interface CredencialRepository {
 	Credencial salva(Credencial credencial);
+	Credencial buscaCredencialPorEmail(String email);
 
 }
