@@ -6,7 +6,7 @@ spring:
   data:
     mongodb:
       authentication-database: admin
-      uri: ${MONGO_DB_URI:mongodb+srv://wakanda:NiAVCUsFGBBExp3U@cluster0.djcfb5x.mongodb.net/wakanda?retryWrites=true&w=majority}
+      uri: ${MONGO_DB_URI:mongodb+srv://neramornas:DpXb9U1fYmFTgluY@wakanda.d3o3yvu.mongodb.net/?retryWrites=true&w=majority&appName=Wakanda}
       auto-index-creation: true
   main:
     allow-circular-references: true

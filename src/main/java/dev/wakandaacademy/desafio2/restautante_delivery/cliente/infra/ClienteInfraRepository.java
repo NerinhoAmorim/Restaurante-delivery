@@ -1,5 +1,8 @@
 package dev.wakandaacademy.desafio2.restautante_delivery.cliente.infra;
 
+import java.util.List;
+import java.util.UUID;
+
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Repository;
@@ -27,6 +30,23 @@ public class ClienteInfraRepository implements ClienteRepository {
 		}
 		log.info("[finaliza] ClienteInfraRepository - salva");
 		return cliente;
+	}
+
+	@Override
+	public List<Cliente> buscaTodosClientes() {
+		log.info("[inicia] ClienteInfraRepository - buscaTodosClientes");
+        List<Cliente> clientes = clienteMongoSpringRepository.findAll();
+        log.info("[finaliza] ClienteInfraRepository - buscaTodosClientes");
+        return clientes;
+	}
+
+	@Override
+	public Cliente buscaClientePorId(UUID idCliente) {
+		 log.info("[inicia] ClienteInfraRepository - buscaClientePorId");
+	        Cliente cliente = clienteMongoSpringRepository.findById(idCliente)
+	                .orElseThrow(() -> APIException.build(HttpStatus.NOT_FOUND, "Cliente não encontrado."));
+	        log.info("[finaliza] ClienteInfraRepository - buscaClientePorId");
+	        return cliente;
 	}
 
 }

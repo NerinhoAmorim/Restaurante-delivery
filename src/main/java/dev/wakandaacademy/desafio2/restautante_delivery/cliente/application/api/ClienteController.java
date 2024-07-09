@@ -1,5 +1,8 @@
 package dev.wakandaacademy.desafio2.restautante_delivery.cliente.application.api;
 
+import java.util.List;
+import java.util.UUID;
+
 import org.springframework.web.bind.annotation.RestController;
 
 import dev.wakandaacademy.desafio2.restautante_delivery.cliente.application.service.ClienteService;
@@ -18,6 +21,23 @@ public class ClienteController implements ClienteAPI {
         ClienteResponse clienteCriado = clienteService.criaCliente(clienteRequest);
         log.info("[finaliza] ClienteController - postCliente");
         return clienteCriado;
+	}
+
+	@Override
+	public List<ClienteListResponse> getTodosClientes() {
+		log.info("[inicia] ClienteController - getTodosClientes");
+        List<ClienteListResponse> clientes = clienteService.buscaTodosClientes();
+        log.info("[finaliza] ClienteController - getTodosClientes");
+        return clientes;
+	}
+
+	@Override
+	public ClienteDetalhadoResponse getClientePorId(UUID idCliente) {
+		 log.info("[inicia] ClienteController - getClientePorId");
+	        log.info("[idCliente] {}", idCliente);
+	        ClienteDetalhadoResponse cliente = clienteService.buscaClientePorId(idCliente);
+	        log.info("[finaliza] ClienteController - getClientePorId");
+	        return cliente;
 	}
 
 }
