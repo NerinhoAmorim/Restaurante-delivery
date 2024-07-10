@@ -76,7 +76,7 @@ public class TokenService {
 		return Optional.ofNullable(this.getSubject(token));
 	}
 
-	public void checaAdmin(String token) {
+	public void consultaAdmin(String token) {
 		if (!SecurityContextHolder.getContext().getAuthentication().getAuthorities().stream()
 				.anyMatch(admin -> admin.getAuthority().equals("ADMIN"))) {
 			throw APIException.build(HttpStatus.UNAUTHORIZED, "Acesso negado: você precisa ser um administrador.");

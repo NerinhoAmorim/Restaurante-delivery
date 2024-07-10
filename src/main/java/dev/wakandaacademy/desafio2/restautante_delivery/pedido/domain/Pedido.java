@@ -5,7 +5,10 @@ import java.util.UUID;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.http.HttpStatus;
 
+import dev.wakandaacademy.desafio2.restautante_delivery.handler.APIException;
+import dev.wakandaacademy.desafio2.restautante_delivery.pedido.application.api.PedidoAlteracaoRequest;
 import dev.wakandaacademy.desafio2.restautante_delivery.pedido.application.api.PedidoRequest;
 import dev.wakandaacademy.desafio2.restautante_delivery.pedido.application.api.PedidoRequestCriandoEndereco;
 import jakarta.validation.constraints.NotBlank;
@@ -55,4 +58,31 @@ public class Pedido {
 		this.dataHoraDoPedido = LocalDateTime.now();
 	}
 
+	public void realizaEntrega() {
+		if (consultaEntrega()) {
+			throw APIException.build(HttpStatus.BAD_REQUEST, "O pedido já foi entregue.");
+		}
+		this.entrega.setPedidoEntregue(true);
+		this.entrega.setDataHoraDaEntrega(LocalDateTime.now());
+
+	}
+
+	public void retiraEntrega() {
+		if (consultaEntrega()) {
+			this.entrega.setPedidoEntregue(false);
+			this.entrega.setDataHoraDaEntrega(null);
+		}
+
+	}
+
+	private boolean consultaEntrega() {
+		return this.entrega.getPedidoEntregue();
+	}
+
+	public void altera(PedidoAlteracaoRequest pedidoAlteracaoRequest) {
+		this.produto = pedidoAlteracaoRequest.getProduto();
+        this.detalhesPedido = pedidoAlteracaoRequest.getDetalhesPedido();
+        this.dataHoraAlteracaoDoPedido = LocalDateTime.now();
+		
+	}
 }

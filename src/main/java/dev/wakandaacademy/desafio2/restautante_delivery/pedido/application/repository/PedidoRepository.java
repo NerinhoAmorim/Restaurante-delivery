@@ -8,5 +8,7 @@ import dev.wakandaacademy.desafio2.restautante_delivery.pedido.domain.Pedido;
 public interface PedidoRepository {
 	List<Pedido> buscaTodosPedidosDoCliente(UUID idCliente);
 	Pedido salvaPedido(Pedido pedido);
+	Pedido buscaPedidoDoClientePorId(UUID idCliente, UUID idPedido);
+	void deletaPedido(Pedido pedido);
 
 }
