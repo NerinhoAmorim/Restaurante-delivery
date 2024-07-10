@@ -49,4 +49,21 @@ public class ClienteInfraRepository implements ClienteRepository {
 	        return cliente;
 	}
 
+	@Override
+	public Cliente buscaClientePorEmail(String clienteEmail) {
+		log.info("[inicia] ClienteInfraRepository - buscaClientePorEmail");
+        Cliente cliente = clienteMongoSpringRepository.findByEmail(clienteEmail)
+                .orElseThrow(() -> APIException.build(HttpStatus.NOT_FOUND, "Cliente não encontrado."));
+        log.info("[finaliza] ClienteInfraRepository - buscaClientePorEmail");
+        return cliente;
+	}
+
+	@Override
+	public void deletaCliente(Cliente cliente) {
+		log.info("[inicia] ClienteInfraRepository - deletaCliente");
+        clienteMongoSpringRepository.delete(cliente);
+        log.info("[finaliza] ClienteInfraRepository - deletaCliente");
+		
+	}
+
 }
