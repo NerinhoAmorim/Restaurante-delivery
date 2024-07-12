@@ -6,6 +6,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.CompoundIndex;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import dev.wakandaacademy.desafio2.restautante_delivery.endereco.application.api.EnderecoAlteracaoRequest;
 import dev.wakandaacademy.desafio2.restautante_delivery.endereco.application.api.EnderecoRequest;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -47,4 +48,13 @@ public class Endereco {
 
 	}
 
+	public void altera(EnderecoAlteracaoRequest enderecoAlteracaoRequest) {
+		this.estado = enderecoAlteracaoRequest.getEstado();
+		this.cidade = enderecoAlteracaoRequest.getCidade();
+		this.rua = enderecoAlteracaoRequest.getRua();
+		this.numero = enderecoAlteracaoRequest.getNumero();
+		this.complemento = enderecoAlteracaoRequest.getComplemento();
+		this.pontoReferencia = enderecoAlteracaoRequest.getPontoReferencia();
+
+	}
 }
