@@ -1,4 +1,4 @@
-package dev.wakandaacademy.desafio2.restautante_delivery.endereco.application.service;
+package dev.wakandaacademy.desafio2.restautante_delivery.entrega.endereco.application.service;
 
 import java.util.List;
 import java.util.UUID;
@@ -6,13 +6,13 @@ import java.util.UUID;
 import org.springframework.stereotype.Service;
 
 import dev.wakandaacademy.desafio2.restautante_delivery.cliente.application.service.ClienteService;
-import dev.wakandaacademy.desafio2.restautante_delivery.endereco.application.api.EnderecoAlteracaoRequest;
-import dev.wakandaacademy.desafio2.restautante_delivery.endereco.application.api.EnderecoDetalhadoResponse;
-import dev.wakandaacademy.desafio2.restautante_delivery.endereco.application.api.EnderecoListResponse;
-import dev.wakandaacademy.desafio2.restautante_delivery.endereco.application.api.EnderecoRequest;
-import dev.wakandaacademy.desafio2.restautante_delivery.endereco.application.api.EnderecoResponse;
-import dev.wakandaacademy.desafio2.restautante_delivery.endereco.application.repository.EnderecoRepository;
-import dev.wakandaacademy.desafio2.restautante_delivery.endereco.domain.Endereco;
+import dev.wakandaacademy.desafio2.restautante_delivery.entrega.endereco.application.api.EnderecoAlteracaoRequest;
+import dev.wakandaacademy.desafio2.restautante_delivery.entrega.endereco.application.api.EnderecoDetalhadoResponse;
+import dev.wakandaacademy.desafio2.restautante_delivery.entrega.endereco.application.api.EnderecoListResponse;
+import dev.wakandaacademy.desafio2.restautante_delivery.entrega.endereco.application.api.EnderecoRequest;
+import dev.wakandaacademy.desafio2.restautante_delivery.entrega.endereco.application.api.EnderecoResponse;
+import dev.wakandaacademy.desafio2.restautante_delivery.entrega.endereco.application.repository.EnderecoRepository;
+import dev.wakandaacademy.desafio2.restautante_delivery.entrega.endereco.domain.Endereco;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 

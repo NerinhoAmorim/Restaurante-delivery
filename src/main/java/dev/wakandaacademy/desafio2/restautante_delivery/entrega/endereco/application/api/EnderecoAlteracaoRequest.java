@@ -1,4 +1,4 @@
-package dev.wakandaacademy.desafio2.restautante_delivery.endereco.application.api;
+package dev.wakandaacademy.desafio2.restautante_delivery.entrega.endereco.application.api;
 
 import lombok.Value;
 

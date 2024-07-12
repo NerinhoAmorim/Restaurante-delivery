@@ -1,4 +1,4 @@
-package dev.wakandaacademy.desafio2.restautante_delivery.endereco.infra;
+package dev.wakandaacademy.desafio2.restautante_delivery.entrega.endereco.infra;
 
 import java.util.List;
 import java.util.UUID;
@@ -7,8 +7,8 @@ import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Repository;
 
-import dev.wakandaacademy.desafio2.restautante_delivery.endereco.application.repository.EnderecoRepository;
-import dev.wakandaacademy.desafio2.restautante_delivery.endereco.domain.Endereco;
+import dev.wakandaacademy.desafio2.restautante_delivery.entrega.endereco.application.repository.EnderecoRepository;
+import dev.wakandaacademy.desafio2.restautante_delivery.entrega.endereco.domain.Endereco;
 import dev.wakandaacademy.desafio2.restautante_delivery.handler.APIException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;

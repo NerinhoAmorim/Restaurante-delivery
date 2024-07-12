@@ -7,8 +7,8 @@ import org.springframework.stereotype.Service;
 
 import dev.wakandaacademy.desafio2.restautante_delivery.cliente.application.service.ClienteService;
 import dev.wakandaacademy.desafio2.restautante_delivery.config.security.service.TokenService;
-import dev.wakandaacademy.desafio2.restautante_delivery.endereco.application.service.EnderecoService;
-import dev.wakandaacademy.desafio2.restautante_delivery.endereco.domain.Endereco;
+import dev.wakandaacademy.desafio2.restautante_delivery.entrega.endereco.application.service.EnderecoService;
+import dev.wakandaacademy.desafio2.restautante_delivery.entrega.endereco.domain.Endereco;
 import dev.wakandaacademy.desafio2.restautante_delivery.pedido.application.api.PedidoAlteracaoRequest;
 import dev.wakandaacademy.desafio2.restautante_delivery.pedido.application.api.PedidoDetalhadoCliente;
 import dev.wakandaacademy.desafio2.restautante_delivery.pedido.application.api.PedidoListCliente;

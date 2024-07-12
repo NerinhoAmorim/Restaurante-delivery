@@ -1,9 +1,9 @@
-package dev.wakandaacademy.desafio2.restautante_delivery.endereco.application.repository;
+package dev.wakandaacademy.desafio2.restautante_delivery.entrega.endereco.application.repository;
 
 import java.util.List;
 import java.util.UUID;
 
-import dev.wakandaacademy.desafio2.restautante_delivery.endereco.domain.Endereco;
+import dev.wakandaacademy.desafio2.restautante_delivery.entrega.endereco.domain.Endereco;
 
 public interface EnderecoRepository {
 	Endereco salvaEndereco(Endereco endereco);

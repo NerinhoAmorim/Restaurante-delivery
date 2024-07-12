@@ -1,4 +1,4 @@
-package dev.wakandaacademy.desafio2.restautante_delivery.endereco.domain;
+package dev.wakandaacademy.desafio2.restautante_delivery.entrega.endereco.domain;
 
 import java.util.UUID;
 
@@ -6,8 +6,8 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.CompoundIndex;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import dev.wakandaacademy.desafio2.restautante_delivery.endereco.application.api.EnderecoAlteracaoRequest;
-import dev.wakandaacademy.desafio2.restautante_delivery.endereco.application.api.EnderecoRequest;
+import dev.wakandaacademy.desafio2.restautante_delivery.entrega.endereco.application.api.EnderecoAlteracaoRequest;
+import dev.wakandaacademy.desafio2.restautante_delivery.entrega.endereco.application.api.EnderecoRequest;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.AccessLevel;

@@ -1,10 +1,10 @@
-package dev.wakandaacademy.desafio2.restautante_delivery.endereco.application.api;
+package dev.wakandaacademy.desafio2.restautante_delivery.entrega.endereco.application.api;
 
 import java.util.List;
 import java.util.UUID;
 import java.util.stream.Collectors;
 
-import dev.wakandaacademy.desafio2.restautante_delivery.endereco.domain.Endereco;
+import dev.wakandaacademy.desafio2.restautante_delivery.entrega.endereco.domain.Endereco;
 import lombok.Value;
 
 @Value

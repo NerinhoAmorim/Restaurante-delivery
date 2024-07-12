@@ -1,4 +1,4 @@
-package dev.wakandaacademy.desafio2.restautante_delivery.endereco.application.api;
+package dev.wakandaacademy.desafio2.restautante_delivery.entrega.endereco.application.api;
 
 import java.util.List;
 import java.util.UUID;
@@ -7,7 +7,7 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.RestController;
 
 import dev.wakandaacademy.desafio2.restautante_delivery.cliente.application.service.ClienteService;
-import dev.wakandaacademy.desafio2.restautante_delivery.endereco.application.service.EnderecoService;
+import dev.wakandaacademy.desafio2.restautante_delivery.entrega.endereco.application.service.EnderecoService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 
